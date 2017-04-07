@@ -4,26 +4,35 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+	<meta http-equiv="content-script-type" content="text/javascript">
 	<title>易礼网首页</title>
 	<link href="css/public.css" rel="stylesheet"  type="text/css">
 	<link href="css/index.css" rel="stylesheet" type="text/css">
 	<link href="css/page.css" rel="stylesheet" type="text/css">
+	<link href="css/member.css" rel="stylesheet" type="text/css">
 	<!--[if lt IE 10]>
 		<script src="js/html5shiv.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/fixed_menu.js"></script>
+    <script type="text/javascript" src="js/fixed_hidden.js"></script>
     <script type="text/javascript" src="js/web.js"></script>
 </head>
 <body>
+	<!-- 首页顶部add -->
+	<!-- <div id="topAdd">
+		<span class="add-closed">X</span>
+		<a class="add-bigImg" href="javascript:;"><img src="images/add-bigImg.jpg" alt=""></a>
+		<a class="add-smallImg" href="javascript:;"><img src="images/add-smallImg.jpg" alt=""></a>
+	</div> -->
+	<!-- 首页顶部add 结束 -->
 	<header>
 		<!-- top -->
 		<div class="top">
 			<div class="container">
 				<p>您好，欢迎来到易礼网！</p>
 				<ul class="navTop-left">
-					<li><a href="login.html">登录</a></li>
+					<li><a href="ec/fe">登录</a></li>
 					<li style="background:none;"><a href="register.html">免费注册</a></li>
 				</ul>
 				<p class="customer-service">客服热线：<span>400-888-8888</span></p>
@@ -47,20 +56,41 @@
 			    </a>
 			</div>
 			<!-- logo结束 -->
-			<!-- 搜索框 -->
+			<!-- top购物车 -->
+			<div class="cart-top">
+				<a href="javascript:;" class="my-ppt">
+					<img src="images/icons/ppt-icon.png" alt="">
+					<p>PPT方案</p>
+				</a>
+				<div class="my-cart">
+					<img src="images/icons/cart-icon01.png" alt="">
+					<p>购物车中<span>0</span>件</p>
+				</div>
+			</div>
+			<!-- top购物车结束 -->
+	        <!-- 搜索框 -->
 			<div class="search-form">
 		   	   	<form action="#">
 		   	   		<!-- 分类下拉 -->
 		   	   		<dl class="dropDownSelect">
 						<dt>礼品</dt>
 						<dd>礼品</dd>
-						<dd>分类一</dd>
-						<dd>分类二</dd>
-						<dd>分类三</dd>
+						<dd>供应商</dd>
+						<dd>在线招标</dd>
+						<dd>在线问答</dd>
 					</dl>
 		   	   		<!-- 分类下拉 结束 -->
 		   	   		<div class="txt-input"><input type="text"></div>
 		   	   		<div class="btn-input"><input type="submit" value="搜索"></div>
+		   	   		<!-- 模糊搜索框 -->
+		   	   		<a href="javascript:;" class="search-clear"></a>
+		   	   		<ul class="search-fuzzy">
+		   	   			<li><p>关键字1</p><span>约<em>1000</em>个商品</span></li>
+		   	   			<li><p>关键字2</p><span>约<em>1000</em>个商品</span></li>
+		   	   		    <li><p>关键字3</p><span>约<em>1000</em>个商品</span></li>
+		   	   			<li><p>关键字4</p><span>约<em>1000</em>个商品</span></li>
+		   	   		</ul>
+		   	   		<!-- 模糊搜索框 结束 -->
 		   	   	</form>
 		   	   	<!-- keyword -->
 				<dl class="keyword">
@@ -74,20 +104,558 @@
 			    <!-- keyword结束 -->
 			</div>
 			<!-- 搜索框结束 -->
-			<!-- top购物车 -->
-			<div class="cart-top">
-				<div class="my-cart">
-					<img src="images/icons/cart-icon01.png" alt="">
-					<p>购物车中<span>0</span>件</p>
-				</div>
-			</div>
-			<!-- top购物车结束 -->
 		</div>
 		<!-- top内容区结束 -->
 	</header>
 	<nav>
 		<dl class="container">
-			<dt><a href="javascript:;" class='all-product'>商品全部分类</a></dt>
+			<dt>
+				<a href="javascript:;" class='all-product'>商品全部分类</a>
+				<ul class="menu-product">
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent"> 
+							<em><img src="images/icons/IndexMenu-icon02.png" alt=""></em>
+							<h6><a href="javascript:;">工艺品</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					    	<div class="sort">
+					    		<p><a href="javascript:;">分类一</a></p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon03.png" alt=""></em>
+							<h6><a href="javascript:;">陶瓷</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					  <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	<div class="sort">
+					    		<p>分类二</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon04.png" alt=""></em>
+							<h6><a href="javascript:;">数码电子</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					        <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>   <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	<div class="sort">
+					    		<p>分类二</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon05.png" alt=""></em>
+							<h6><a href="javascript:;">皮具箱包</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					    	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    	<p><a href="javascript:;">树脂</a><a href="javascript;;">陶瓷</a><a href="javascript;;">金属</a> <a href="javascript:;">铜</a> <a href="javascript:;">水晶</a> <a href="javascript:;">木</a><a href="javascript:;">铁</a><a href="javascript:;">玻璃</a><a href="javascript:;">合金</a><a href="javascript:;">石材</a>
+					    	</p>
+					        <p><a href="javascript:;">简约现代</a><a href="javascript;;">新古典</a><a href="javascript;;">现代中式</a> <a href="javascript:;">欧式</a> <a href="javascript:;">明清古典</a> <a href="javascript:;">田源</a><a href="javascript:;">玉器</a>
+					    	</p>
+					    	<p><a href="javascript:;">创意</a><a href="javascript;;">送礼</a><a href="javascript;;">结婚礼物</a> <a href="javascript:;">招财</a> <a href="javascript:;">新房装饰</a> <a href="javascript:;">美式乡村</a><a href="javascript:;">情人节</a>
+					    	</p>
+					    	<p><a href="javascript:;">教师节</a><a href="javascript;;">平安是福</a><a href="javascript;;">财神爷</a> <a href="javascript:;">大象凳</a> <a href="javascript:;">地中海风景</a> <a href="javascript:;">水晶苹果</a>
+					    	</p>
+					      	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon06.png" alt=""></em>
+							<h6><a href="javascript:;">促销赠品</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					    	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    	<p><a href="javascript:;">树脂</a><a href="javascript;;">陶瓷</a><a href="javascript;;">金属</a> <a href="javascript:;">铜</a> <a href="javascript:;">水晶</a> <a href="javascript:;">木</a><a href="javascript:;">铁</a><a href="javascript:;">玻璃</a><a href="javascript:;">合金</a><a href="javascript:;">石材</a>
+					    	</p>
+					        <p><a href="javascript:;">简约现代</a><a href="javascript;;">新古典</a><a href="javascript;;">现代中式</a> <a href="javascript:;">欧式</a> <a href="javascript:;">明清古典</a> <a href="javascript:;">田源</a><a href="javascript:;">玉器</a>
+					    	</p>
+					    	<p><a href="javascript:;">创意</a><a href="javascript;;">送礼</a><a href="javascript;;">结婚礼物</a> <a href="javascript:;">招财</a> <a href="javascript:;">新房装饰</a> <a href="javascript:;">美式乡村</a><a href="javascript:;">情人节</a>
+					    	</p>
+					    	<p><a href="javascript:;">教师节</a><a href="javascript;;">平安是福</a><a href="javascript;;">财神爷</a> <a href="javascript:;">大象凳</a> <a href="javascript:;">地中海风景</a> <a href="javascript:;">水晶苹果</a>
+					    	</p>
+					      	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon07.png" alt=""></em>
+							<h6><a href="javascript:;">杯壶</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					    	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    	<p><a href="javascript:;">树脂</a><a href="javascript;;">陶瓷</a><a href="javascript;;">金属</a> <a href="javascript:;">铜</a> <a href="javascript:;">水晶</a> <a href="javascript:;">木</a><a href="javascript:;">铁</a><a href="javascript:;">玻璃</a><a href="javascript:;">合金</a><a href="javascript:;">石材</a>
+					    	</p>
+					        <p><a href="javascript:;">简约现代</a><a href="javascript;;">新古典</a><a href="javascript;;">现代中式</a> <a href="javascript:;">欧式</a> <a href="javascript:;">明清古典</a> <a href="javascript:;">田源</a><a href="javascript:;">玉器</a>
+					    	</p>
+					    	<p><a href="javascript:;">创意</a><a href="javascript;;">送礼</a><a href="javascript;;">结婚礼物</a> <a href="javascript:;">招财</a> <a href="javascript:;">新房装饰</a> <a href="javascript:;">美式乡村</a><a href="javascript:;">情人节</a>
+					    	</p>
+					    	<p><a href="javascript:;">教师节</a><a href="javascript;;">平安是福</a><a href="javascript;;">财神爷</a> <a href="javascript:;">大象凳</a> <a href="javascript:;">地中海风景</a> <a href="javascript:;">水晶苹果</a>
+					    	</p>
+					      	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon08.png" alt=""></em>
+							<h6><a href="javascript:;">小家电</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					    	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    	<p><a href="javascript:;">树脂</a><a href="javascript;;">陶瓷</a><a href="javascript;;">金属</a> <a href="javascript:;">铜</a> <a href="javascript:;">水晶</a> <a href="javascript:;">木</a><a href="javascript:;">铁</a><a href="javascript:;">玻璃</a><a href="javascript:;">合金</a><a href="javascript:;">石材</a>
+					    	</p>
+					        <p><a href="javascript:;">简约现代</a><a href="javascript;;">新古典</a><a href="javascript;;">现代中式</a> <a href="javascript:;">欧式</a> <a href="javascript:;">明清古典</a> <a href="javascript:;">田源</a><a href="javascript:;">玉器</a>
+					    	</p>
+					    	<p><a href="javascript:;">创意</a><a href="javascript;;">送礼</a><a href="javascript;;">结婚礼物</a> <a href="javascript:;">招财</a> <a href="javascript:;">新房装饰</a> <a href="javascript:;">美式乡村</a><a href="javascript:;">情人节</a>
+					    	</p>
+					    	<p><a href="javascript:;">教师节</a><a href="javascript;;">平安是福</a><a href="javascript;;">财神爷</a> <a href="javascript:;">大象凳</a> <a href="javascript:;">地中海风景</a> <a href="javascript:;">水晶苹果</a>
+					    	</p>
+					      	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon09.png" alt=""></em>
+							<h6><a href="javascript:;">家居用品</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					    	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    	<p><a href="javascript:;">树脂</a><a href="javascript;;">陶瓷</a><a href="javascript;;">金属</a> <a href="javascript:;">铜</a> <a href="javascript:;">水晶</a> <a href="javascript:;">木</a><a href="javascript:;">铁</a><a href="javascript:;">玻璃</a><a href="javascript:;">合金</a><a href="javascript:;">石材</a>
+					    	</p>
+					        <p><a href="javascript:;">简约现代</a><a href="javascript;;">新古典</a><a href="javascript;;">现代中式</a> <a href="javascript:;">欧式</a> <a href="javascript:;">明清古典</a> <a href="javascript:;">田源</a><a href="javascript:;">玉器</a>
+					    	</p>
+					    	<p><a href="javascript:;">创意</a><a href="javascript;;">送礼</a><a href="javascript;;">结婚礼物</a> <a href="javascript:;">招财</a> <a href="javascript:;">新房装饰</a> <a href="javascript:;">美式乡村</a><a href="javascript:;">情人节</a>
+					    	</p>
+					    	<p><a href="javascript:;">教师节</a><a href="javascript;;">平安是福</a><a href="javascript;;">财神爷</a> <a href="javascript:;">大象凳</a> <a href="javascript:;">地中海风景</a> <a href="javascript:;">水晶苹果</a>
+					    	</p>
+					      	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon10.png" alt=""></em>
+							<h6><a href="javascript:;">家纺</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					    	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    	<p><a href="javascript:;">树脂</a><a href="javascript;;">陶瓷</a><a href="javascript;;">金属</a> <a href="javascript:;">铜</a> <a href="javascript:;">水晶</a> <a href="javascript:;">木</a><a href="javascript:;">铁</a><a href="javascript:;">玻璃</a><a href="javascript:;">合金</a><a href="javascript:;">石材</a>
+					    	</p>
+					        <p><a href="javascript:;">简约现代</a><a href="javascript;;">新古典</a><a href="javascript;;">现代中式</a> <a href="javascript:;">欧式</a> <a href="javascript:;">明清古典</a> <a href="javascript:;">田源</a><a href="javascript:;">玉器</a>
+					    	</p>
+					    	<p><a href="javascript:;">创意</a><a href="javascript;;">送礼</a><a href="javascript;;">结婚礼物</a> <a href="javascript:;">招财</a> <a href="javascript:;">新房装饰</a> <a href="javascript:;">美式乡村</a><a href="javascript:;">情人节</a>
+					    	</p>
+					    	<p><a href="javascript:;">教师节</a><a href="javascript;;">平安是福</a><a href="javascript;;">财神爷</a> <a href="javascript:;">大象凳</a> <a href="javascript:;">地中海风景</a> <a href="javascript:;">水晶苹果</a>
+					    	</p>
+					      	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    </div>
+					    <!-- 二级菜单结束 -->
+                        <li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em class="selected"><img src="images/icons/fixedMenu-icon13.png" alt=""></em>
+							<h6>食品鲜花</h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child" style="display: none;">
+                        <div class="sort">
+				    		<p><a href="chaye.html">茶叶</a></p>
+                            <div class="content">
+					    			<a href="longjing.html">龙井</a>
+					    			<a href="maofeng.html">毛峰</a>
+					    			<a href="biluochun.html">碧螺春</a>
+					    			<a href="maojian.html">毛尖</a>
+					    			<a href="hongcha.html">红茶</a>
+					    			<a href="baihaoyinzhen.html">白毫银针</a>
+					    			<a href="baimudan.html">白牡丹</a>
+					    			<a href="shoumei.html">寿眉</a>
+					    			<a href="wulongcha.html">乌龙茶</a>
+					    			<a href="huangcha.html">黄茶</a>
+					    			<a href="puer.html">普洱</a>
+					    			<a href="tieguanyin.html">铁观音</a>
+					    		</div>
+                                </div>
+                        <div class="sort">
+				    		<p><a href="jiushui.html">酒水</a></p>
+                            <div class="content">
+					    			<a href="yangjiu.html">洋酒</a>
+					    			<a href="putaojiu.html">葡萄酒</a>
+					    			<a href="jinkouhongjiu.html">进口红酒</a>
+					    			<a href="baijiu.html">白酒</a>
+					    			<a href="huangjiu.html">黄酒</a>
+					    			<a href="mijiu.html">米酒</a>
+					    		</div>
+                                </div>
+                        <div class="sort">
+				    		<p><a href="difangtechan.html">地方特产</a></p>
+                            <div class="content">
+					    			<a href="difangtechan0.html">地方特产</a>
+					    		</div>
+                                </div>
+                        <div class="sort">
+				    		<p><a href="xianhua0.html">鲜花</a></p>
+                            <div class="content">
+					    			<a href="xianhua1.html">鲜花</a>
+					    		</div>
+                                </div>
+                        <div class="sort">
+				    		<p><a href="youlei.html">油类</a></p>
+                            <div class="content">
+					    			<a href="zuozuoyou.html">橄榄油</a>
+					    			<a href="chayou.html">茶油</a>
+					    		</div>
+                                </div>
+                        <div class="sort">
+				    		<p><a href="baojianpin.html">保健品</a></p>
+                            <div class="content">
+					    			<a href="ziranzhibao.html">自然之宝</a>
+					    		</div>
+                                </div>
+                        <div class="sort">
+				    		<p><a href="dazhaxie.html">大闸蟹</a></p>
+                            <div class="content">
+					    			<a href="dazhaxie0.html">大闸蟹</a>
+					    		</div>
+                                </div>
+                        <div class="sort">
+				    		<p><a href="shiqita.html">其它</a></p>
+                            <div class="content">
+					    			<a href="shipinqita.html">其它</a>
+					    		</div>
+                                </div>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon11.png" alt=""></em>
+							<h6><a href="javascript:;">食品</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					    	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    	<p><a href="javascript:;">树脂</a><a href="javascript;;">陶瓷</a><a href="javascript;;">金属</a> <a href="javascript:;">铜</a> <a href="javascript:;">水晶</a> <a href="javascript:;">木</a><a href="javascript:;">铁</a><a href="javascript:;">玻璃</a><a href="javascript:;">合金</a><a href="javascript:;">石材</a>
+					    	</p>
+					        <p><a href="javascript:;">简约现代</a><a href="javascript;;">新古典</a><a href="javascript;;">现代中式</a> <a href="javascript:;">欧式</a> <a href="javascript:;">明清古典</a> <a href="javascript:;">田源</a><a href="javascript:;">玉器</a>
+					    	</p>
+					    	<p><a href="javascript:;">创意</a><a href="javascript;;">送礼</a><a href="javascript;;">结婚礼物</a> <a href="javascript:;">招财</a> <a href="javascript:;">新房装饰</a> <a href="javascript:;">美式乡村</a><a href="javascript:;">情人节</a>
+					    	</p>
+					    	<p><a href="javascript:;">教师节</a><a href="javascript;;">平安是福</a><a href="javascript;;">财神爷</a> <a href="javascript:;">大象凳</a> <a href="javascript:;">地中海风景</a> <a href="javascript:;">水晶苹果</a>
+					    	</p>
+					      	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon12.png" alt=""></em>
+							<h6><a href="javascript:;">玩具</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					    	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    	<p><a href="javascript:;">树脂</a><a href="javascript;;">陶瓷</a><a href="javascript;;">金属</a> <a href="javascript:;">铜</a> <a href="javascript:;">水晶</a> <a href="javascript:;">木</a><a href="javascript:;">铁</a><a href="javascript:;">玻璃</a><a href="javascript:;">合金</a><a href="javascript:;">石材</a>
+					    	</p>
+					        <p><a href="javascript:;">简约现代</a><a href="javascript;;">新古典</a><a href="javascript;;">现代中式</a> <a href="javascript:;">欧式</a> <a href="javascript:;">明清古典</a> <a href="javascript:;">田源</a><a href="javascript:;">玉器</a>
+					    	</p>
+					    	<p><a href="javascript:;">创意</a><a href="javascript;;">送礼</a><a href="javascript;;">结婚礼物</a> <a href="javascript:;">招财</a> <a href="javascript:;">新房装饰</a> <a href="javascript:;">美式乡村</a><a href="javascript:;">情人节</a>
+					    	</p>
+					    	<p><a href="javascript:;">教师节</a><a href="javascript;;">平安是福</a><a href="javascript;;">财神爷</a> <a href="javascript:;">大象凳</a> <a href="javascript:;">地中海风景</a> <a href="javascript:;">水晶苹果</a>
+					    	</p>
+					      	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon13.png" alt=""></em>
+							<h6><a href="javascript:;">珠宝</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					    	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    	<p><a href="javascript:;">树脂</a><a href="javascript;;">陶瓷</a><a href="javascript;;">金属</a> <a href="javascript:;">铜</a> <a href="javascript:;">水晶</a> <a href="javascript:;">木</a><a href="javascript:;">铁</a><a href="javascript:;">玻璃</a><a href="javascript:;">合金</a><a href="javascript:;">石材</a>
+					    	</p>
+					        <p><a href="javascript:;">简约现代</a><a href="javascript;;">新古典</a><a href="javascript;;">现代中式</a> <a href="javascript:;">欧式</a> <a href="javascript:;">明清古典</a> <a href="javascript:;">田源</a><a href="javascript:;">玉器</a>
+					    	</p>
+					    	<p><a href="javascript:;">创意</a><a href="javascript;;">送礼</a><a href="javascript;;">结婚礼物</a> <a href="javascript:;">招财</a> <a href="javascript:;">新房装饰</a> <a href="javascript:;">美式乡村</a><a href="javascript:;">情人节</a>
+					    	</p>
+					    	<p><a href="javascript:;">教师节</a><a href="javascript;;">平安是福</a><a href="javascript;;">财神爷</a> <a href="javascript:;">大象凳</a> <a href="javascript:;">地中海风景</a> <a href="javascript:;">水晶苹果</a>
+					    	</p>
+					      	<p><a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a> <a href="javascript:;">琉璃</a> <a href="javascript:;">竹木</a> <a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    	</p>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon14.png" alt=""></em>
+							<h6><a href="javascript:;">奢侈品</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					  <div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	<div class="sort">
+					    		<p>分类二</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon15.png" alt=""></em>
+							<h6><a href="javascript:;">鲜花</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					    	<div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    	<div class="sort">
+					    		<p>分类二</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+
+					<li>
+						<!-- 一级菜单 -->
+						<div class="menu-parent">
+							<em><img src="images/icons/IndexMenu-icon16.png" alt=""></em>
+							<h6><a href="javascript:;">水果</a></h6>
+					    </div>
+					    <!-- 一级菜单结束 -->
+					    <!-- 二级菜单 -->
+					    <div class="menu-child">
+					    	<div class="sort">
+					    		<p>分类一</p>
+					    		<div class="content">
+					    			<a href="javascript:;">水晶玻璃</a><a href="javascript;;">锡器</a><a href="javascript;;">金属</a><a href="javascript:;">琉璃</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a><a href="javascript:;">竹木</a><a href="javascript:;">树脂</a><a href="javascript:;">玉器</a><a href="javascript:;">文房四宝</a>
+					    		</div>
+					    	</div>
+					    </div>
+					    <!-- 二级菜单结束 -->
+					</li>
+				</ul>
+			</dt>
 			<dd><a href="index.html" class="selected">首页</a></dd>
 			<dd><a href="javascript:;">在线招标</a></dd>
 			<dd><a href="javascript:;">礼品解决方案</a></dd>
@@ -98,148 +666,5 @@
 			<dd><a href="javascript:;">积分商城</a></dd>
 		</dl>
 	</nav>
-	<!-- 内容 -->
-	<div class="content container">
-		<!-- 右侧悬浮菜单 -->
-		<ul class="right-fixed">
-			<li class="icon01"><a href="javascript:;">
-				<em></em>
-				<p>在线客服</p>
-			</a></li>
-			<li class="icon02"><a href="javascript:;">
-				<em></em>
-				<p>官方微博</p>
-				<div class="mask">
-					<img src="images/icons/erweima.jpg" alt="">
-				</div>
-			</a></li>
-			<li class="icon03"><a href="javascript:;">
-				<em></em>
-				<p>客服电话</p>
-			</a></li>
-			<li class="returnTop"><a href="javascript:;">
-				<em></em>
-			</a></li>
-		</ul>
-		<!-- 右侧悬浮菜单 结束-->
-	</div>
-	<!-- 内容 -->
-	<footer>
-        <ul class="container">
-            <li>
-                <dl>
-                    <dt><em><img src="images/icons/footerNav-icon01.png" alt=""></em><p>购物指南</p></dt>
-                    <dd><a href="javacsript:;">购物流程</a></dd>
-                    <dd><a href="javascript:;">订购方式</a></dd>
-                    <dd><a href="javascript:;">联系客服</a></dd>
-                    <dd><a href="javascript:;">交易条款</a></dd>
-                    <dd><a href="javascript:;">买家须知</a></dd>
-                </dl>
-            </li>
-            <li>
-                <dl>
-                    <dt><em><img src="images/icons/footerNav-icon02.png" alt=""></em><p>支付方式</p></dt>
-                    <dd><a href="javacsript:;">银行汇款</a></dd>
-                    <dd><a href="javascript:;">在线支付</a></dd>
-                    <dd><a href="javascript:;">组合支付</a></dd>
-                </dl>
-            </li>
-             <li>
-                <dl>
-                    <dt><em><img src="images/icons/footerNav-icon03.png" alt=""></em><p>退换货流程</p></dt>
-                    <dd><a href="javacsript:;">退换货政策</a></dd>
-                    <dd><a href="javascript:;">退换货流程</a></dd>
-                    <dd><a href="javascript:;">隐私政策</a></dd>
-                </dl>
-            </li>
-            <li>
-                <dl>
-                    <dt><em><img src="images/icons/footerNav-icon04.png" alt=""></em><p>售后服务</p></dt>
-                    <dd><a href="javacsript:;">售后服务总则</a></dd>
-                    <dd><a href="javascript:;">服务政策</a></dd>
-                </dl>
-            </li>
-             <li>
-                <dl>
-                    <dt><em><img src="images/icons/footerNav-icon05.png" alt=""></em><p>帮助中心</p></dt>
-                    <dd><a href="javacsript:;">网点分布</a></dd>
-                    <dd><a href="javascript:;">加盟商区</a></dd>
-                </dl>
-            </li>
-            <div class="online-footer">
-            	<div class="tel-footer">
-            		<h6>服务热线：</h6>
-            		<p>400-123-4567</p>
-            	</div>
-            	<div class="online">
-            		<h6>在线咨询</h6>
-            		<p>7*24小时热线</p>
-            	</div>
-            </div>
-        </ul>
-        <!-- 友情链接 -->
-        <dl class="links container">
-        	<dt><em></em><p>友情链接</p></dt>
-        	<dd>
-        		<a href="javascript:;">小商品批发城</a>
-        		<a href="javascript:;">激光打标机价格</a>
-        		<a href="javascript:;">重庆室内设计培训</a>
-        		<a href="javascript:;">深圳礼品网</a>
-        		<a href="javascript:;">青铜钟</a>
-        		<a href="javascript:;">高级婚纱定做</a>
-        		<a href="javascript:;">礼品公司</a>
-        		<a href="javascript:;">成都礼品</a>
-        		<a href="javacsript:;">时代商城</a>
-        		<a href="javascript:;">送礼网</a>
-        		<a href="javascript:;">苏州移动厕所租赁</a>
-        		<a href="javascript:;">勋章制作</a>
-        		<a href="javascript:;">钥匙扣厂家</a>
-        		<a href="javascript:;">云南名翡玉翠</a>
-        		<a href="javascript:;">成都摄影工作室</a>
-        		<a href="javascript:;">汽车电子狗</a>
-        		<a href="javascript:;">电动巡逻车</a>
-        		<a href="javascript:;">饰品加盟</a>
-        		<a href="javascript:;">汴绣</a>
-        		<a href="javascript:;">商务礼品公司</a>
-        		<a href="javascript:;">二手挖掘机</a>
-        		<a href="javascript:;">黄龙玉</a>
-        		<a href="javacsript:;">电子礼品定</a>
-        		<a href="javascript:;">上海展台设计搭建</a>
-        		<a href="javascript:;">广告机</a>
-        		<a href="javascript:;">电热水器</a>
-        		<a href="javascript:;">郑州礼品公司</a>
-        		<a href="javascript:;">礼品手表</a>
-        		<a href="javascript:;">木盒包装</a>
-        		<a href="javascript:;">郴州百房网</a>
-        		<a href="javascript:;">礼品册公司</a>
-        		<a href="javascript:;">天下美食</a>
-        		<a href="javascript:;">搜狐焦点西宁站</a>
-        		<a href="javascript:;">网上车管所</a>
-        		<a href="javascript:;">水晶奖杯</a>
-        		<a href="javascript:;">河南印刷商城</a>
-        		<a href="javascript:;">散文大全</a>
-        		<a href="javascript:;">礼品卡</a>
-        		<a href="javascript:;">北京礼品公司</a>
-        		<a href="javascript:;">洪湖大闸蟹</a>
-        		<a href="javascript:;">水冷式冷水机</a>
-        		<a href="javascript:;">景德镇陶瓷</a>
-        		<a href="javascript:;">都市信息</a>
-
-        	</dd>
-        </dl>
-        <!-- 友情链接 结束 -->
-		<!-- footer 底部内容 -->
-		<div class="bottom-footer">
-			<ul class="container">
-				<li><a href="javascript:;">关于我们</a></li>
-				<li><a href="javascript:;">网站地图</a></li>
-				<li><a href="javascript:;">隐私政策</a></li>
-				<li><a href="javascript:;">网站声明</a></li>
-				<li><a href="javascript:;">联系我们</a></li>
-			</ul>
-			<p>经营许可证编号：粤ICP备12063896号-1 备案号：粤ICP备12063896号-1  Copyright &copy; 2014 鹏凯科技有限公司</p>
-		</div>
-		<!-- footer 底部内容结束 -->
-	</footer>
 </body>
 </html>
